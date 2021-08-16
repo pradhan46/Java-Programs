@@ -1,4 +1,4 @@
-package cohelp;
+package cohelp;				//shopping console application java
 
 import java.util.HashMap;
 import java.io.File;
