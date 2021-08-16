@@ -1,0 +1,94 @@
+
+public class palindrome {
+	public boolean isPalindrome (int number) {
+		boolean palindrome= true;
+		int reverse=0;
+		int n=number;
+		while(n>0)
+		{
+			reverse=reverse*10+n%10;
+			n=n/10;
+
+		}
+		if(number!=reverse)
+		{
+			palindrome=false;
+		}
+		return palindrome;
+	}
+
+	public boolean  isPalindrome (String str) {
+		boolean palindrome= true;
+		int strlen = str.length();	//gets length of string
+		if(strlen>1) {				//check for condition
+			int i =0, j=strlen-1;
+			while(i<j)
+			{
+				if(str.charAt(i)!=str.charAt(j)) {
+					palindrome=false;
+					break;
+				}
+				i++;
+				j--;
+			}
+		}
+		return palindrome;
+	}
+
+	public static void main(String[] args) {
+		palindrome 
+public class palindrome {
+	public boolean isPalindrome (int number) {
+		boolean palindrome= true;
+		int reverse=0;
+		int n=number;
+		while(n>0)
+		{
+			reverse=reverse*10+n%10;
+			n=n/10;
+
+		}
+		if(number!=reverse)
+		{
+			palindrome=false;
+		}
+		return palindrome;
+	}
+
+	public boolean  isPalindrome (String str) {
+		boolean palindrome= true;
+		int strlen = str.length();	//gets length of string
+		if(strlen>1) {				//check for condition
+			int i =0, j=strlen-1;
+			while(i<j)
+			{
+				if(str.charAt(i)!=str.charAt(j)) {
+					palindrome=false;
+					break;
+				}
+				i++;
+				j--;
+			}
+		}
+		return palindrome;
+	}
+
+	public static void main(String[] args) {
+		palindrome p = new palindrome();
+		if(p.isPalindrome("121")) //input here
+			System.out.println("palindrome");
+		else
+			System.out.println("not palindrome");
+	}
+}
+
+
+p = new palindrome();
+		if(p.isPalindrome("121")) //input here
+			System.out.println("palindrome");
+		else
+			System.out.println("not palindrome");
+	}
+}
+
+
