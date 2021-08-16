@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class noVowelName {
+	
+	public static boolean isVowel(char c) { 
+		
+		boolean vowel = false;
+		switch(c) {						//using switch case
+			case 'a':vowel = true; break;
+			case 'e':vowel = true; break;
+			case 'i':vowel = true; break;
+			case 'o':vowel = true; break;
+			case 'u':vowel = true; break;
+			case 'A':vowel = true; break;
+			case 'E':vowel = true; break;
+			case 'I':vowel = true; break;
+			case 'O':vowel = true; break;
+			case 'U':vowel = true; break;
+			default:break;
+		}
+		return vowel;
+	}
+	public static boolean check(String str) {
+		
+		boolean noVowel = true;
+		for(int i = 0 ; i < str.length(); i++) { //checks for condition
+			if(isVowel(str.charAt(i))) {
+				noVowel  = false;
+				break;
+			}	
+		}
+		return noVowel;
+	}
+	
+	public static void main(String[] args) {	//main method
+		
+		Scanner sc = new Scanner (System.in);
+		System.out.println("Enter the name:"); //accepts user input
+		String name = sc.next();
+		if(check(name))
+			System.out.println("Eureka!"); //print output
+		else
+			System.out.println("No luck!");
+	}
+
+}
