@@ -1,0 +1,45 @@
+/*finding the missing numbers within a range*/
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class FindTheNumbers {
+
+	public static void printMissing(ArrayList<Integer> arr, int n, int start, int end) {
+		
+		int count = end - start + 1 - n;
+		int i = start, j = count;
+		
+		while(i <= end && count > 0) {		//condition 
+			if(!arr.contains(i)) {
+				System.out.print(i + " ");
+				count--;
+			}
+			i++;
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter count of integers that you remember:"); //enter a input  n=5
+		int n = sc.nextInt();
+		
+		System.out.println("Enter the numbers that you remember:"); //enter the number 
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		for(int i = 0; i < n; i++) {
+			int number = sc.nextInt();
+			arr.add(number);
+		}
+		
+		System.out.println("Enter starting number:");	//enter the starting number
+		int start = sc.nextInt();
+		
+		System.out.println("Enter ending number:");	//enter the ending number
+		int end = sc.nextInt();
+		
+		printMissing(arr, n, start, end);
+	}
+
+}
